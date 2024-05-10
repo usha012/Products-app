@@ -105,7 +105,7 @@ const Orders = () => {
                     <tbody>
                     {
                         cartData.map((el,i)=>(
-                            <tr className='border-neutral-200 border-b-2 py-3'>
+                            <tr key={i} className='border-neutral-200 border-b-2 py-3'>
                                 <td className='py-3'>{el?.name} </td>
                                 <td className='py-3'>
                                     <Button className="bg-transparent hover:bg-transparent px-3  border-slate-200 border-2 text-slate-500" onClick={() => (qunatity("minus",el,i))}>

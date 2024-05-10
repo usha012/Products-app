@@ -10,7 +10,7 @@ import axios from 'axios';
 
 
 
-const editOrder = () => {
+const EditOrder = () => {
 
     const [cartData, setCartData] = useState([])
     const [userAddress, setuserAddress] = useState({})
@@ -96,7 +96,7 @@ const editOrder = () => {
                     <tbody>
                     {
                         cartData?.map((el,i)=>(
-                            <tr className='border-neutral-200 border-b-2 py-3'>
+                            <tr key={i} className='border-neutral-200 border-b-2 py-3'>
                                 <td>{el?.productId}</td>
                                 <td className='py-3'>
                                     <Button className="bg-transparent hover:bg-transparent px-3  border-slate-200 border-2 text-slate-500" onClick={() => (qunatity("minus",el,i))}>
@@ -166,4 +166,4 @@ const editOrder = () => {
   )
 }
 
-export default editOrder
+export default EditOrder

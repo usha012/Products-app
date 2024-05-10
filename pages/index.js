@@ -158,7 +158,6 @@ export default function Home(props) {
     if(selectedProducts.length === products.length){
       setSelectedProducts([])
     }else{
-      // const select = products.map(el=>el)
       setSelectedProducts([...products]) 
     }
 
@@ -325,7 +324,7 @@ export default function Home(props) {
             <div className="grid grid-cols-3 gap-4">
               {
                 products?.map((el, i)=>(
-                  <Card className="justify-center flex flex-col shadow-lg hover:shadow-2xl relative">
+                  <Card key={i} className="justify-center flex flex-col shadow-lg hover:shadow-2xl relative">
                     <div className="space-x-2 absolute right-5 top-3">
                         <input type="checkbox" className="w-[20px] h-[20px]" checked={selectedProducts.find((item)=>item?.id === el?.id)} onChange={(e)=>updateSelectedProduct(el)}/>
                     </div>

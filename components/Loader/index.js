@@ -1,7 +1,5 @@
 import React from 'react'
-import LoaderImg from "@/public/assets/images/loader.gif"
 import ReactModal from 'react-modal';
-console.log(LoaderImg);
 
 const SpinnerLoader = ({show, closeShow}) => {
     const customStyles = {

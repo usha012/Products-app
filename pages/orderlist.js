@@ -6,7 +6,7 @@ import { formatDate } from '@/helper';
 import Link from 'next/link'
 import SpinnerLoader from '@/components/Loader';
 
-const orderlist = () => {
+const OrderList = () => {
     const [orders,setorders] = useState([])
     const [loader, setLoader] = useState(false)
 
@@ -106,4 +106,4 @@ const orderlist = () => {
   )
 }
 
-export default orderlist
+export default OrderList
