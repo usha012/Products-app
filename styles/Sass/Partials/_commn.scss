@@ -1,0 +1,409 @@
+@import "./mixin";
+.topbar {
+  border-radius: 16rem 7rem;
+}
+
+.range_slider{
+  input[type='range'] {
+    overflow: hidden;
+    width: 150px;
+    -webkit-appearance: none;
+    background-color: $bg-gray-500;
+    border-radius: 4px;
+  }
+
+  input[type='range']::-webkit-slider-runnable-track{
+    height: 10px;
+    -webkit-appearance: none;
+    color: $text-primary;
+    margin-top: -1px;
+    width: 100%;
+  }
+
+  input[type='range']::-webkit-slider-thumb {
+    width: 10px;
+    -webkit-appearance: none;
+    height: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    background: $bg-secondary;
+    box-shadow: -80px 0 0 80px $bg-primary;
+  }
+}
+// .main_navbar {
+//   .navbar-nav {
+//     .nav-link {
+//       font-size: 1.143rem;
+//       color: rgba(0, 0, 0, 0.55);
+
+//       &.active {
+//         color: $text-primary;
+//         font-weight: 500;
+//       }
+//     }
+//   }
+//   height: 100px;
+//   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+// }
+// .shopping_count {
+//   top: -10px;
+//   right: -6px;
+// }
+// .hero-header {
+//   background: linear-gradient(
+//       rgba(248, 223, 173, 0.1),
+//       rgba(248, 223, 173, 0.1)
+//     ),
+//     url(../../Images/hero-img.jpg);
+//   background-position: center;
+//   background-size: cover;
+//   background-repeat: no-repeat;
+// }
+// .search_input:focus {
+//   border-color: $bg-secondary;
+// }
+// .carousel_control_pre,
+// .carousel_control_next {
+//   @include button(
+//     $bg: $bg-primary,
+//     $color: $text-white,
+//     $hoverBg: $bg-primary,
+//     $opacity: 1,
+//     $hoverColor: $text-white
+//   );
+//   width: 40px;
+//   height: 40px;
+//   border: 1px solid #fff;
+//   padding: 1.5rem;
+//   opacity: 0.5;
+//   top: 50%;
+//   z-index: 9;
+//   transform: translateY(-50%);
+//   &:hover {
+//     opacity: 1 !important;
+//   }
+// }
+// .header_carousel {
+//   .item {
+//     a {
+//       transform: translate(-50%, -50%);
+//       width: fit-content;
+//       // background: linear-gradient(rgba(255, 181, 36, 0.7));
+//       // background: linear-gradient(#e66465, #9198e5);
+//       background: linear-gradient(
+//         rgba(255, 181, 36, 0.7),
+//         rgba(255, 181, 36, 0.7)
+//       );
+//       font-weight: 600;
+//       transition: 0.5s;
+//     }
+//   }
+// }
+
+// features
+// .featurs_item {
+//   background-color: #f4f6f8 !important;
+//   .featurs_icon {
+//     &:after {
+//       @include btn-square();
+//       content: "";
+//       width: 35px;
+//       height: 35px;
+//       background-color: $bg-secondary;
+//       position: absolute;
+//       bottom: -10px;
+//       transform: rotate(45deg);
+//     }
+//   }
+// }
+
+// end features
+// fruit shop start
+// .allProducts_shop {
+//   .tab_class {
+//     .tab_pill {
+//         color:$text-gray-600;
+//         background-color: $bg-white;
+//         transition: all 0.1s linear;
+//        &.active{
+//           background-color: $bg-secondary;
+//           color:$text-white;
+//         }
+//       span {
+//         width: 120px;
+//         display: inline-block;
+        
+//       }
+//     }
+//   }
+// }
+// fruit shop end
+// fruit card start
+.card_fruit_item{
+  height: 100%;
+  transition: 0.5s;
+  &:hover {
+    box-shadow: 0 0 55px rgba(0, 0, 0, 0.4);
+  }
+  .fruit_img{
+    aspect-ratio: 4/3;
+    background-color: $bg-gray-600;
+    img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: 0.5s;
+      &:hover{
+        transform: scale(1.2);
+      }
+    }
+  }
+}
+// fruit card end
+// service start
+// .service{
+//   .service_item{
+//     .service_img{
+//       aspect-ratio: 4/3;
+//       object-fit: contain;
+//     }
+    
+//     .service_content{
+//       position: relative;
+//       width: 250px;
+//       height: 130px;
+//       top: -50%;
+//       left: 50%;
+//       transform: translate(-50%, -50%);
+//     }
+//   }
+// }
+// service end
+
+// vegetable_carousel start
+// .vegetable_carousel{
+//   .owl-stage{
+//     transition: all 1.5s ease 0s !important;
+//   }
+//   .card_fruit_item{
+//     img{
+//       transition: 0.5s;
+//       &:hover{
+//       transform: scale(1.2);
+//       }
+//     }
+//   }
+//   .owlcarousel_nav{
+//     .next{
+//       position: absolute;
+//       top:2.533rem;
+//       right: 0;
+//       padding: 0.333rem 1.733rem;
+//       &:hover,&:focus{
+//         box-shadow: none;
+//       }
+//     }
+//     .pre{
+//       position: absolute;
+//       top:2.533rem;
+//       right:6%;
+//       padding: 0.333rem 1.733rem;
+//       &:hover,&:focus{
+//         box-shadow: none;
+//       }
+//     }
+//   }
+// }
+// vegetable_carousel end
+// banner start
+// .banner{
+//   .banner_btn{
+//     &:hover{
+//       background-color: $bg-primary;
+//       color:$text-gray-600;
+//     }
+//   }
+//   .banner_badge{
+//     width: 140px;
+//     height: 140px;
+//   }
+// }
+// banner end
+// best saller products start
+// .bestsaler_products{
+//   .card_img_wrapper{
+//     aspect-ratio: 1;
+//     background-color: $bg-gray-600;
+//     border-radius: 50%;
+//     img{
+//       width: 100%;
+//       height: 100%;
+//       object-fit: cover;
+//     }
+//   }
+//   .squareCard_img_wrapper{
+//     aspect-ratio: 4/3;
+//     background-color: $bg-gray-600;
+//     img{
+//       width: 100%;
+//       height: 100%;
+//       object-fit: cover;
+//     }
+//   }
+  
+// }
+// best saller products end
+// facts start
+// .counter{
+//   height: 100%;
+//   text-align: center;
+//   box-shadow: 0 0 30px rgba(0, 0, 0, 0.05);
+//   h3{
+//     letter-spacing: 1px;
+//     text-transform: uppercase;
+//   }
+// }
+// facts end
+// testimonial start
+// .testimonial_carousel{
+//   .pre{
+//     right:6%;
+//     padding: 5px 25px;
+//     &:focus{
+//      box-shadow: none;
+//     }
+//   }
+//   .next{
+//     padding: 5px 25px;
+//     &:focus{
+//       box-shadow: none;
+//     }
+//   }
+// }
+// testimonial end
+// footer start
+// .footer{
+//   .top_footer{
+//     border-bottom: 1px solid rgba(226, 175, 24, 0.5);
+//   }
+//   .footer_item{
+//     p.mb-4{
+//       line-height: 35px;
+//     }
+//     .btn_link{
+//       line-height: 35px;
+//       color: rgba(255, 255, 255, .5);
+//       transition: 0.5s;
+//       &:hover{
+//         color:$text_secondary;
+//       }
+//     }
+//   }
+// }
+// footer end
+// pegination start
+// .pegination a {
+//   padding: 10px 16px;
+//   color:$text-gray-600;
+//   transition: 0.5s;
+//   margin: 0 4px;
+//   &.active, &:hover{
+//     background-color: $bg-primary;
+//   }
+// }
+// .pegination li {
+//   padding: 11px 1px;
+//   color:$text-gray-600;
+//   transition: 0.5s;
+//   margin: 0 4px;
+//   &.active, &:hover{
+//     background-color: $bg-primary;
+//   }
+// }
+// pegination end
+// sidebar start
+// .shop_sidebar{
+//   .fruit_categorie{
+//     .fruit_name{
+//       line-height: 40px;
+//     }
+//   }
+//   .feature_img{
+//     width: 100px;
+//     height: 100px;
+//     img{
+//       width: 100%;
+//       height: 100%;
+//       object-fit: contain;
+//     }
+//   } 
+//   .bannerFruit_text{
+//     top:50%;
+//     right:10px;
+//     transform:translateY(-50%);
+//   }
+//   .multiSlider{
+//     border: none;
+//     box-shadow: none;
+//     padding: 15px 10px;
+//   }
+//   .multi-range-slider .thumb::before{
+//     box-shadow: none;
+//     border: 0px;
+//   }
+//   .multi-range-slider .bar-inner{
+//     border: 0px;
+//     box-shadow: none;
+//   }
+// }
+// sidebar end
+
+// shop page start
+
+.page_header{
+  background:linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(/assets/images/cart-page-header-img.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-top: 46px;
+}
+// .fruit_shop{
+//   .sorting{
+//     &:focus{
+//       box-shadow: none;
+//     }
+//   }
+// }
+//product details start
+// .quantity{
+//   width: 105px;
+// }
+// .productDetails_tab {
+//   .nav-tabs{
+//     .nav-link{
+//        border: none !important;
+//        border-bottom: 2px solid transparent !important;
+//        transition: all;
+//        &:hover{
+//         color:$text-primary;
+//        }
+//     }
+//     .nav-link.active{
+//       // border: none !important;
+//       // ~.active{
+//         border-bottom: 2px solid $bg-secondary !important;
+//         color:$text-gray-600;
+//         // background-color: $bg-primary;
+//       // }
+//     }
+//   }
+// }
+
+//product details end
+ 
+
+
+
+    
+    
+// shop page end
