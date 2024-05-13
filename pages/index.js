@@ -271,14 +271,13 @@ export default function Home(props) {
           
 
         <div className="flex justify-between">
-          <div className="sidebar w-1/5">
-
+          <div className="sidebar w-2/5 sm:w-1/5">
             <div className="range_slider mb-5">
               <h4 className="mb-3">Price Range</h4>
               <p>Min Price - ($ {priceRange?.min})</p>
-              <input type="range" className="form-range" id="customRange2" min={0} max={2000} name="minRange" value={priceRange?.min} onChange={(e)=>setPriceRange({...priceRange,min: e.target.value})}></input>
+              <input type="range" className="form-range w-[104px] md:w-[150px]" id="customRange2" min={0} max={2000} name="minRange" value={priceRange?.min} onChange={(e)=>setPriceRange({...priceRange,min: e.target.value})}></input>
               <p>Max Price - ($ {priceRange?.max})</p>
-              <input type="range" className="form-range" id="customRange2" min={0} max={2000}  name="maxRange" value={priceRange?.max} onChange={(e)=>setPriceRange({...priceRange, max:e.target.value})}></input>
+              <input type="range" className="form-range w-[104px] md:w-[150px]" id="customRange2" min={0} max={2000}  name="maxRange" value={priceRange?.max} onChange={(e)=>setPriceRange({...priceRange, max:e.target.value})}></input>
               <p>{priceRange?.max}</p>
             </div>
 
@@ -287,7 +286,6 @@ export default function Home(props) {
                     <h4 className="mb-3">Price</h4>
                     <div className='mb-2'  onClick={()=> sortPrice("ascending")}>
                         <input className="form-check-input rounded-circle me-2" type="radio"  name="organic" checked={sortProductPrice ==="ascending" }   />
-                        
                         <label className="form-check-label">
                             Low to High
                         </label>
@@ -298,30 +296,12 @@ export default function Home(props) {
                             High to Low
                         </label>
                     </div>
-                   
-                    
-                    {/* <div className='mb-2'>
-                        <input className="form-check-input rounded-circle me-2" type="checkbox" value="" />
-                        <label className="form-check-label">
-                            Discount
-                        </label>
-                    </div>
-                    <div className='mb-2'>
-                        <input className="form-check-input rounded-circle me-2" type="checkbox" value="" />
-                        <label className="form-check-label">
-                            Expired
-                        </label>
-                    </div> */}
-
-
                 </div>
             </div>
-
-
           </div>
-          <div className="product  w-4/5 pl-[4rem]">
-
-            <div className="grid grid-cols-3 gap-4">
+                        
+          <div className="product w-3/5 sm:w-4/5 pl-[0rem]  sm:pl-[4rem]">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
               {
                 products?.map((el, i)=>(
                   <Card key={i} className="justify-center flex flex-col shadow-lg hover:shadow-2xl relative">
@@ -353,35 +333,26 @@ export default function Home(props) {
                 ))
               }
 
+            </div> 
+            <div className="pagination my-[3rem]">
+              <Pagination>
+                <PaginationContent>
+                  <PaginationItem className="cursor-pointer" onClick={() => setSelectedPage(selectedPage - 1 || 1)}>
+                    <PaginationPrevious />
+                  </PaginationItem>
+                  {
+                    generateArray(totalPages)?.map((num,index) => (
+                      <PaginationItem key={index} onClick={() => setSelectedPage(num)}>
+                        <PaginationLink><p className={`px-3 py-1 rounded-md cursor-pointer ${selectedPage === num ? "bg-[#81c408] text-gray-900" : ""}`}>{num}</p></PaginationLink>
+                      </PaginationItem>
+                    ))
+                  }
+                  <PaginationItem  className="cursor-pointer" onClick={() =>  selectedPage === totalPages ?  "" : setSelectedPage(selectedPage + 1)} >
+                    <PaginationNext />
+                  </PaginationItem>
+                </PaginationContent>
+              </Pagination>
             </div>
-            
-
-
-
-            
-          <div className="pagination my-[3rem]">
-            <Pagination>
-              <PaginationContent>
-                <PaginationItem className="cursor-pointer" onClick={() => setSelectedPage(selectedPage - 1 || 1)}>
-                  <PaginationPrevious />
-                </PaginationItem>
-                {
-                  generateArray(totalPages)?.map((num,index) => (
-                    <PaginationItem key={index} onClick={() => setSelectedPage(num)}>
-                      <PaginationLink><p className={`px-3 py-1 rounded-md cursor-pointer ${selectedPage === num ? "bg-[#81c408] text-gray-900" : ""}`}>{num}</p></PaginationLink>
-                    </PaginationItem>
-                  ))
-                }
-                <PaginationItem  className="cursor-pointer" onClick={() =>  selectedPage === totalPages ?  "" : setSelectedPage(selectedPage + 1)} >
-                  <PaginationNext />
-                </PaginationItem>
-              </PaginationContent>
-            </Pagination>
-          </div>
-
-
-
-       
           </div>
         </div>
       </div>
