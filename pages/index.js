@@ -235,10 +235,10 @@ export default function Home(props) {
               selectedProducts.length
               ?
               <Link href={{pathname:'/orders', query:{product: JSON.stringify(selectedProducts)}}}>
-                <Button className="bg_primary mr-4"> Buy Now</Button>
+                <Button className="bg-[#81c408] mr-4"> Buy Now</Button>
               </Link>
               :
-              <Button className="bg_primary mr-4" onClick={()=> alert("Please select Product")}> Buy Now</Button>
+              <Button className="bg-[#81c408] mr-4" onClick={()=> alert("Please select Product")}> Buy Now</Button>
 
             }
             
@@ -340,8 +340,8 @@ export default function Home(props) {
                       <CardDescription>Quantity: {el?.quantity}</CardDescription>
                   </CardContent>
                   <CardFooter className="flex justify-between mt-5">
-                    <Button className="bg_primary" onClick={() => deleteProduct(el?.id)}>Delete</Button>
-                    <Button className="bg_primary" onClick={()=> editProduct(el)}>
+                    <Button className="bg-[#81c408]" onClick={() => deleteProduct(el?.id)}>Delete</Button>
+                    <Button className="bg-[#81c408]" onClick={()=> editProduct(el)}>
                       Edit
                     </Button>
                   </CardFooter>
@@ -368,7 +368,7 @@ export default function Home(props) {
                 {
                   generateArray(totalPages)?.map((num,index) => (
                     <PaginationItem key={index} onClick={() => setSelectedPage(num)}>
-                      <PaginationLink><p className={`px-3 py-1 rounded-md cursor-pointer ${selectedPage === num ? "bg_primary text-gray-900" : ""}`}>{num}</p></PaginationLink>
+                      <PaginationLink><p className={`px-3 py-1 rounded-md cursor-pointer ${selectedPage === num ? "bg-[#81c408] text-gray-900" : ""}`}>{num}</p></PaginationLink>
                     </PaginationItem>
                   ))
                 }
