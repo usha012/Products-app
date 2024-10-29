@@ -6,6 +6,7 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle, 
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import axios from 'axios';
+import Template from '@/template';
 
 
 
@@ -71,15 +72,10 @@ const EditOrder = () => {
     },[router?.query?.order])
 
   return (
-    <>
-    <Header/>
-    {/* page header strat */}
-    <div className=' page_header py-8 text-center'>
-    <h1 className='text-white fs_28'>shop</h1>
-    <p className='mb-0 text-white'>Home/page</p>
+    <Template>
 
-    </div>
-    {/*page header end  */}
+
+
     <div className="container md:mx-auto px-20 py-8">
         <div className="flex justify-center mb-10">
             <div className=' w-full pr-8'>
@@ -162,7 +158,7 @@ const EditOrder = () => {
 
      
 
-    </>
+    </Template>
   )
 }
 

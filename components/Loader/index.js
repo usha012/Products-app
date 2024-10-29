@@ -20,7 +20,6 @@ const SpinnerLoader = ({show, closeShow}) => {
   return (
     <ReactModal
         isOpen={show}
-        onRequestClose={closeShow || ""}
         style={customStyles}
         contentLabel="Loader Modal"
       >

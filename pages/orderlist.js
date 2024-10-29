@@ -5,6 +5,7 @@ import axios from 'axios';
 import { formatDate } from '@/helper';
 import Link from 'next/link'
 import SpinnerLoader from '@/components/Loader';
+import Template from '@/template';
 
 const OrderList = () => {
     const [orders,setorders] = useState([])
@@ -40,13 +41,7 @@ const OrderList = () => {
     },[])
 
   return (
-    <>
-    <Header/>
-    {/* page header strat */}
-    <div className=' page_header py-8 text-center'>
-    <h1 className='text-white fs_28'>shop</h1>
-    <p className='mb-0 text-white'>Home/page</p>
-    </div>
+    <Template>
 
     <div className="container md:mx-auto px-20 py-8">
         <div className="flex justify-center mb-10">
@@ -102,7 +97,7 @@ const OrderList = () => {
         </div>
 
         <SpinnerLoader show={loader} closeShow={() => setLoader(false)}/>
-    </>
+    </Template>
   )
 }
 

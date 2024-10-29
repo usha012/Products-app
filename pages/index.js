@@ -15,6 +15,7 @@ import { Label } from "@/components/ui/label"
 import { Checkbox } from "@/components/ui/checkbox"
 import Link from 'next/link'
 import SpinnerLoader from "@/components/Loader";
+import Template from "@/template";
 
 
 
@@ -191,17 +192,7 @@ export default function Home(props) {
   },[limit, total])
   
   return (
-    <>
-    <Header/>
-    
-
-    {/* page header strat */}
-    <div className=' page_header py-8 text-center'>
-        <h1 className='text-white fs_28'>shop</h1>
-        <p className='mb-0 text-white'>Home/page</p>
-
-    </div>
-     {/*page header end  */}
+    <Template >
      
 
    
@@ -415,6 +406,6 @@ export default function Home(props) {
 
 
 
-    </>
+    </Template>
   );
 }
